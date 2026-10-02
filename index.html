@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
 <title>バブル満喫 仲良し6人組 山口旅行 10/24–25</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +51,7 @@ h2{font-family:"M PLUS Rounded 1c",sans-serif;font-weight:800;font-size:24px;mar
 
 /* legend */
 .legend{display:flex;gap:10px;flex-wrap:wrap;font-size:14px;margin:12px 0 0}
-.pill{display:inline-block;font-size:13px;font-weight:700;padding:1px 9px;border-radius:999px;border:1.5px solid currentColor;line-height:1.6}
+.pill{display:inline-block;white-space:nowrap;font-size:13px;font-weight:700;padding:1px 9px;border-radius:999px;border:1.5px solid currentColor;line-height:1.6}
 .p5{color:var(--five)} .p6{color:var(--six)}
 
 /* timeline */
@@ -87,18 +88,6 @@ tr.sum td{font-weight:700;border-bottom:none}
 .drv li::before{content:counter(d);font-family:"M PLUS Rounded 1c",sans-serif;font-weight:800;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--sea);color:var(--card);font-size:15px}
 .drv li span{font-size:14px;color:var(--sub);display:block}
 
-/* per person */
-.toggle{display:flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px;margin:8px 0 14px}
-.toggle button{flex:1;border:0;background:transparent;color:var(--ink);font:inherit;font-weight:700;font-size:15px;padding:9px 6px;border-radius:999px;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:var(--sea);color:var(--card)}
-.who{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.who div{border-radius:14px;padding:14px 12px;background:var(--bg)}
-.who .lbl{font-size:14px;font-weight:700;color:var(--sub)}
-.who .amt{font-family:"M PLUS Rounded 1c",sans-serif;font-weight:800;font-size:30px;line-height:1.2;font-variant-numeric:tabular-nums}
-.who .amt small{font-size:15px}
-.who .d5 .amt{color:var(--five)} .who .d6 .amt{color:var(--six)}
-.who .br{font-size:13px;color:var(--sub);margin-top:4px;line-height:1.55}
-
 .murai{border:2px solid var(--torii)}
 .murai .train{display:grid;grid-template-columns:1fr auto;gap:2px 10px;font-size:15px;padding:10px 0;border-bottom:1px solid var(--line)}
 .murai .train:last-of-type{border-bottom:0}
@@ -126,8 +115,7 @@ footer{font-size:13px;color:var(--sub);margin-top:32px}
 <nav aria-label="目次"><ul>
   <li><a href="#day1">1日目</a></li>
   <li><a href="#day2">2日目</a></li>
-  <li><a href="#driver">運転交代</a></li>
-  <li><a href="#cost">費用</a></li>
+    <li><a href="#cost">費用</a></li>
   <li><a href="#murai">村井さん</a></li>
 </ul></nav>
 
@@ -145,17 +133,17 @@ footer{font-size:13px;color:var(--sub);margin-top:32px}
   <li class="stop big"><div class="t">8:30</div><div class="b"><h3>オリックスレンタカー広島駅北口 集合</h3><p>5人集合・貸出手続き。ETCカードを忘れずに。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=オリックスレンタカー広島駅北口">地図</a></p></div></li>
   <li class="stop"><div class="t">9:00</div><div class="b"><h3>広島出発</h3><p>広島東ICから山陽道へ</p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p5">5人</span> 高速 約100km・約1時間</div></li>
-  <li class="stop"><div class="t">10:15</div><div class="b"><h3>下松SA　休憩・運転交代</h3><p>15分ほどトイレ休憩</p></div></li>
+  <li class="stop"><div class="t">10:15</div><div class="b"><h3>下松SA　休憩</h3><p>15分ほどトイレ休憩</p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p5">5人</span> 高速 約110km・約1時間15分　下関ICで降りる</div></li>
-  <li class="stop big"><div class="t">11:55</div><div class="b"><h3>新下関駅　村井さんと合流</h3><p>村井さんは小倉11:12発 → 11:21着で先に待機 <a class="map" href="https://www.google.com/maps/search/?api=1&query=新下関駅">地図</a></p></div></li>
+  <li class="stop big"><div class="t">11:55</div><div class="b"><h3>新下関駅　村井さんと合流</h3><p>村井さんは博多10:52発のこだまで、新下関に11:21着の予定 <a class="map" href="https://www.google.com/maps/search/?api=1&query=新下関駅">地図</a></p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 一般道 約10km・約25分</div></li>
-  <li class="stop big"><div class="t">12:20</div><div class="b"><h3>唐戸市場で昼食</h3><p>土曜はお寿司の屋台（活きいき馬関街）の日。売り切れ前に着きたいところ。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=唐戸市場">地図</a></p></div></li>
-  <li class="stop"><div class="t">13:25</div><div class="b"><h3>海響館</h3><p>唐戸市場から歩いてすぐ。見学1時間ちょっと。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=海響館">地図</a></p></div></li>
-  <li class="stop"><div class="t">14:50</div><div class="b"><h3>角島へ出発</h3><p>国道191号で日本海側を北上</p></div></li>
+  <li class="stop big"><div class="t">12:20</div><div class="b"><h3>唐戸市場で昼食</h3><p>土曜はお寿司の屋台（活きいき馬関街）の日。売り切れ前に着きたいところ。70分ゆっくり。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=唐戸市場">地図</a></p></div></li>
+  <li class="stop"><div class="t">13:30</div><div class="b"><h3>角島へ出発</h3><p>国道191号で日本海側を北上。海響館は、角島のお店が閉まる前に着くために省略しました。</p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 一般道 約45km・約1時間</div></li>
-  <li class="stop"><div class="t">15:50</div><div class="b"><h3>道の駅 北浦街道豊北　休憩・運転交代</h3><p>角島大橋が見える道の駅 <a class="map" href="https://www.google.com/maps/search/?api=1&query=道の駅北浦街道豊北">地図</a></p></div></li>
+  <li class="stop"><div class="t">14:30</div><div class="b"><h3>道の駅 北浦街道豊北　休憩</h3><p>15分休憩。角島大橋が見える道の駅 <a class="map" href="https://www.google.com/maps/search/?api=1&query=道の駅北浦街道豊北">地図</a></p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 約10km・約15分</div></li>
-  <li class="stop big"><div class="t">16:20</div><div class="b"><h3>角島大橋・角島で夕景</h3><p>橋を渡って島内をぶらり。日の入りは17時半ごろの見込み。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=角島大橋">地図</a></p></div></li>
+  <li class="stop big"><div class="t">15:00</div><div class="b"><h3>角島着　島内さんぽ</h3><p>お店や灯台は16時ごろに閉まる可能性があるけぇ、先に回っとく。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=角島大橋">地図</a></p></div></li>
+  <li class="stop big"><div class="t">16:00</div><div class="b"><h3>夕景タイム</h3><p>角島大橋が見える場所で日の入りを待つ。日の入りは17時20分ごろの見込み。</p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 約3km・約5分</div></li>
   <li class="stop big"><div class="t">17:45</div><div class="b"><h3>西長門リゾート　チェックイン</h3><p>宿泊代は当日各自精算 <a class="map" href="https://www.google.com/maps/search/?api=1&query=西長門リゾートホテル">地図</a></p></div></li>
 </ol>
@@ -169,35 +157,18 @@ footer{font-size:13px;color:var(--sub);margin-top:32px}
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 約25km・約35分</div></li>
   <li class="stop"><div class="t">9:05</div><div class="b"><h3>千畳敷</h3><p>日本海を見下ろす高台の草原。30分 <a class="map" href="https://www.google.com/maps/search/?api=1&query=千畳敷+長門市">地図</a></p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 約8km・約15分</div></li>
-  <li class="stop big"><div class="t">9:50</div><div class="b"><h3>元乃隅神社　運転交代</h3><p>海へ続く赤い鳥居。早い時間なら駐車場も入りやすい。40分 <a class="map" href="https://www.google.com/maps/search/?api=1&query=元乃隅神社">地図</a></p></div></li>
+  <li class="stop big"><div class="t">9:50</div><div class="b"><h3>元乃隅神社</h3><p>海へ続く赤い鳥居。早い時間なら駐車場も入りやすい。40分 <a class="map" href="https://www.google.com/maps/search/?api=1&query=元乃隅神社">地図</a></p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 約25km・約40分</div></li>
   <li class="stop"><div class="t">11:10</div><div class="b"><h3>青海島（仙崎）</h3><p>道の駅センザキッチンに車を置いて散策、または島へドライブ。50分 <a class="map" href="https://www.google.com/maps/search/?api=1&query=道の駅センザキッチン">地図</a></p></div></li>
-  <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 一般道 約65km・約1時間15分　ここで運転交代</div></li>
+  <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 一般道 約65km・約1時間15分</div></li>
   <li class="stop big"><div class="t">13:15</div><div class="b"><h3>瓦そば　香山（長州苑）で昼食</h3><p>山口市・香山公園（瑠璃光寺）のそば。日曜昼は混むので予約できるか確認を。 <a class="map" href="https://www.google.com/maps/search/?api=1&query=長州苑+山口市">地図</a></p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p6">6人</span> 約18km・約30分</div></li>
-  <li class="stop big"><div class="t">14:50</div><div class="b"><h3>新山口駅　村井さんとお別れ</h3><p>村井さんは新幹線で小倉へ <a class="map" href="https://www.google.com/maps/search/?api=1&query=新山口駅">地図</a></p></div></li>
+  <li class="stop big"><div class="t">14:50</div><div class="b"><h3>新山口駅　村井さんとお別れ</h3><p>村井さんは新幹線で博多へ <a class="map" href="https://www.google.com/maps/search/?api=1&query=新山口駅">地図</a></p></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p5">5人</span> 小郡ICから高速 約50km・約35分</div></li>
-  <li class="stop"><div class="t">15:40</div><div class="b"><h3>下松SA　休憩・運転交代</h3></div></li>
+  <li class="stop"><div class="t">15:40</div><div class="b"><h3>下松SA　休憩</h3></div></li>
   <li class="drive"><div></div><div class="b"><span class="pill p5">5人</span> 高速 約100km・約1時間15分</div></li>
   <li class="stop big"><div class="t">17:15</div><div class="b"><h3>オリックスレンタカー広島駅北口 返却</h3><p>返却前に給油（満タン返し）。おつかれさまでした！</p></div></li>
 </ol>
-
-<!-- DRIVER -->
-<h2 id="driver">運転交代ポイント</h2>
-<p class="lead">1区間はだいたい1時間以内。担当は当日決めてね。</p>
-<div class="card">
-<ol class="drv">
-  <li><div>広島駅北口 → 下松SA<span>高速 約100km・1時間｜5人</span></div></li>
-  <li><div>下松SA → 新下関駅 → 唐戸市場<span>高速＋一般道 約125km・1時間40分｜途中で6人に</span></div></li>
-  <li><div>唐戸市場 → 道の駅北浦街道豊北<span>一般道 約45km・1時間｜6人</span></div></li>
-  <li><div>豊北 → 角島 → 西長門リゾート<span>約13km・20分｜6人</span></div></li>
-  <li><div>ホテル → 千畳敷 → 元乃隅神社<span>約33km・50分｜6人</span></div></li>
-  <li><div>元乃隅神社 → 青海島<span>約25km・40分｜6人</span></div></li>
-  <li><div>青海島 → 香山 → 新山口駅<span>一般道 約83km・1時間45分｜6人（香山で交代してもOK）</span></div></li>
-  <li><div>新山口駅 → 下松SA<span>高速 約53km・40分｜5人</span></div></li>
-  <li><div>下松SA → 広島駅北口<span>高速 約100km・1時間15分｜5人</span></div></li>
-</ol>
-</div>
 
 <!-- COST -->
 <h2 id="cost">費用シミュレーション</h2>
@@ -228,25 +199,30 @@ footer{font-size:13px;color:var(--sub);margin-top:32px}
 
 <div class="card">
   <h3>ひとりあたり（ホテル代は別）</h3>
-  <p class="note" style="margin:0">レンタカー代 26,950円を何人で割る？</p>
-  <div class="toggle" role="group" aria-label="レンタカー代の割り方">
-    <button type="button" data-split="5" aria-pressed="true">広島組5人で割る</button>
-    <button type="button" data-split="6" aria-pressed="false">6人で割る</button>
-  </div>
-  <div class="who">
-    <div class="d5"><div class="lbl">広島組 ひとり</div><div class="amt"><span id="a5">8,106</span><small>円</small></div><div class="br" id="b5"></div></div>
-    <div class="d6"><div class="lbl">村井さん</div><div class="amt"><span id="a6">4,770</span><small>円</small></div><div class="br" id="b6"></div></div>
-  </div>
-  <p class="note">5人区間のガソリン・高速は5人で、6人区間のガソリンは6人で割っとります。村井さんは新幹線代込み。</p>
+  <p class="note" style="margin:0 0 10px">レンタカー代 26,950円の割り方で2パターン</p>
+  <div class="scroll"><table>
+    <tr><th></th><th class="n">A 広島組5人で割る</th><th class="n">B 6人で割る</th></tr>
+    <tr><td>レンタカー</td><td class="n">5,390円</td><td class="n">4,492円</td></tr>
+    <tr><td colspan="3" style="font-weight:700;padding-top:14px">広島組 ひとり</td></tr>
+    <tr><td>高速</td><td class="n">1,258円</td><td class="n">1,258円</td></tr>
+    <tr><td>ガソリン</td><td class="n">1,458円</td><td class="n">1,458円</td></tr>
+    <tr class="sum"><td>合計</td><td class="n" style="color:var(--five);font-size:20px">8,106円</td><td class="n" style="color:var(--five);font-size:20px">7,208円</td></tr>
+    <tr><td colspan="3" style="font-weight:700;padding-top:14px;border-top:1px solid var(--line)">村井さん</td></tr>
+    <tr><td>レンタカー</td><td class="n">0円</td><td class="n">4,492円</td></tr>
+    <tr><td>ガソリン</td><td class="n">470円</td><td class="n">470円</td></tr>
+    <tr><td>新幹線</td><td class="n">8,450円</td><td class="n">8,450円</td></tr>
+    <tr class="sum"><td>合計</td><td class="n" style="color:var(--six);font-size:20px">8,920円</td><td class="n" style="color:var(--six);font-size:20px">13,412円</td></tr>
+  </table></div>
+  <p class="note">5人区間のガソリン・高速は5人で、6人区間のガソリンは6人で割っとります。村井さんは新幹線代込み（博多⇔新下関・新山口の自由席）。</p>
 </div>
 
 <!-- MURAI -->
 <h2 id="murai">村井さんへ</h2>
 <div class="card murai">
-  <h3>新幹線の目安（自由席）</h3>
-  <div class="train"><div><b>24日　小倉 11:12 → 新下関 11:21</b><br>こだま950号・約9分</div><div class="n" style="text-align:right">1,200円</div></div>
-  <div class="train"><div><b>25日　新山口 15:00〜15:30ごろ → 小倉</b><br>こだま・ひかり・さくら等で約20〜30分</div><div class="n" style="text-align:right">約3,100円</div></div>
-  <p class="note">広島組の新下関着は11:55ごろ予定なので、駅で30分ほど待っといてもらう形です。次の便（12:12発→12:21着）だと車が20分待ちになります。時刻は平日ダイヤをもとにしとるので、土日の時刻は乗る前にJRのサイトかアプリで確認してね。帰りは新山口に着いてから来た便に乗ればOK。</p>
+  <h3>新幹線の目安（博多発着・自由席）</h3>
+  <div class="train"><div><b>24日　博多 10:52 → 新下関 11:21</b><br>こだま・約30分</div><div class="n" style="text-align:right">3,280円</div></div>
+  <div class="train"><div><b>25日　新山口 15:00〜15:30ごろ → 博多</b><br>のぞみ・さくらで約35分、こだまだと約1時間</div><div class="n" style="text-align:right">5,170円</div></div>
+  <p class="note">往復で8,450円。5人組の新下関着は11:55ごろ予定なので、駅で30分ほど待っといてもらう形です。時刻は平日ダイヤをもとにしとるので、土日の時刻は乗る前にJRのサイトかアプリで確認してね。帰りは新山口に着いてから、来た博多行きに乗ればOK。</p>
 </div>
 
 <div class="card">
@@ -254,27 +230,9 @@ footer{font-size:13px;color:var(--sub);margin-top:32px}
   <p class="note" style="margin:0">ETCカード（休日割引に必須）／運転する人は免許証／歩きやすい靴（千畳敷・元乃隅は坂あり）／上着（日本海側は夕方冷えます）／駐車場代・入館料は別途。</p>
 </div>
 
-<footer>距離・時間は渋滞なしの目安、料金は2026年9月時点の調べです。当日の道路状況で前後します。</footer>
+<footer>距離・時間は渋滞なしの目安、料金は2026年10月時点の調べです。当日の道路状況で前後します。</footer>
 </main>
 
-<script>
-(function(){
-  var RENT=26950, HWY=6290, G5=4941, G6=2822, T1=1200, T2=3100;
-  var common=Math.round(HWY/5)+Math.round(G5/5)+Math.round(G6/6);
-  function yen(n){return n.toLocaleString('ja-JP')}
-  function render(split){
-    var r=Math.round(RENT/split);
-    var g6=Math.round(G6/6);
-    document.getElementById('a5').textContent=yen(r+common);
-    document.getElementById('b5').innerHTML='車 '+yen(r)+'／高速 '+yen(Math.round(HWY/5))+'<br>ガソリン '+yen(Math.round(G5/5)+g6);
-    var m=g6+T1+T2+(split===6?r:0);
-    document.getElementById('a6').textContent=yen(m);
-    document.getElementById('b6').innerHTML=(split===6?'車 '+yen(r)+'／':'')+'ガソリン '+yen(g6)+'<br>新幹線 '+yen(T1+T2);
-    document.querySelectorAll('.toggle button').forEach(function(b){b.setAttribute('aria-pressed',String(Number(b.dataset.split)===split))});
-  }
-  document.querySelectorAll('.toggle button').forEach(function(b){b.addEventListener('click',function(){render(Number(b.dataset.split))})});
-  render(5);
-})();
-</script>
+
 </body>
 </html>
